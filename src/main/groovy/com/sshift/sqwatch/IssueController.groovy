@@ -19,7 +19,6 @@ class IssueController {
     @Autowired ScanSonar scanSonar
     @Autowired AuthorRepository authorRepository
     @Autowired IssueRepository issueRepository
-    @Autowired AskJenkins askJenkins
     @Autowired TeamRepository teamRepository
 
     @GetMapping(value = "/issues/{since}/{before}")
@@ -32,12 +31,6 @@ class IssueController {
     @ResponseBody
     List<Issue> fixed(@PathVariable String since, @PathVariable String before) {
         return scanSonar.getIssuesResolvedAfter(since, before)
-    }
-
-    @GetMapping(value = "/jiraissue-assignee/{branch}")
-    @ResponseBody
-    String branchAssignee(@PathVariable String branch) {
-        return askJenkins.jiraIssueAssignee(branch)
     }
 
     @GetMapping(value = "/team-from-email/{email}")
