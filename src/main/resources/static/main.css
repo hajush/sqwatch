@@ -1,0 +1,56 @@
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.navbar {
+    background-color: #f2ccff;
+}
+
+.navbar-brand small {
+    display:block;
+    font-size:10px;
+}
+
+.goodnews {
+    color: green;
+}
+
+.badnews {
+    color: red;
+}
+
+.bvr { text-align: center; }
+
+.verybig {
+    font-size: 60px;
+}
+
+.quotebig {
+    font-size: 30px;
+}
+
+table thead .caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid \9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+table thead .dropup .caret,
+table thead .navbar-fixed-bottom .dropdown .caret {
+    border-top: 0;
+    border-bottom: 4px dashed;
+    border-bottom: 4px solid \9;
+    content: "";
+}

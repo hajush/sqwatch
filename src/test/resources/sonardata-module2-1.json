@@ -1,0 +1,131 @@
+{
+  "total": 3,
+  "p": 1,
+  "ps": 100,
+  "paging": {
+    "pageIndex": 1,
+    "pageSize": 100,
+    "total": 3
+  },
+  "effortTotal": 30,
+  "debtTotal": 30,
+  "issues": [
+    {
+      "key": "eshR6fS4nk8oH7ejzXku",
+      "rule": "java:S1117",
+      "severity": "MAJOR",
+      "component": "myproj-module2:module2/com/thecompany/module2/Addresses.java",
+      "project": "myproj-module2",
+      "line": 635,
+      "hash": "baaccc487f9ea449fc91158fa4e58ddd",
+      "textRange": {
+        "startLine": 635,
+        "endLine": 635,
+        "startOffset": 32,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename \"endRecessTurkeyKeyWrist\" which hides the field declared at line 53.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "dreed@mycompany.com",
+      "tags": [
+        "cert",
+        "pitfall",
+        "suspicious"
+      ],
+      "creationDate": "2021-03-08T00:00:00-0700",
+      "updateDate": "2021-03-08T00:00:00-0700",
+      "type": "CODE_SMELL",
+      "organization": "default-organization",
+      "fromHotspot": false
+    },
+    {
+      "key": "Fq4Y5cw_UV8JSQV5BYb5",
+      "rule": "java:S1117",
+      "severity": "MAJOR",
+      "component": "myproj-module2:module2/com/thecompany/module2/Addresses.java",
+      "project": "myproj-module2",
+      "line": 636,
+      "hash": "14de103882c50339588b6a02b76fdf3f",
+      "textRange": {
+        "startLine": 636,
+        "endLine": 636,
+        "startOffset": 8,
+        "endOffset": 12
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename \"endRecessTurkeyKeyWrist\" which hides the field declared at line 53.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "suzanne@mycompany.com",
+      "tags": [
+        "cert",
+        "pitfall",
+        "suspicious"
+      ],
+      "creationDate": "2021-03-08T00:00:00-0700",
+      "updateDate": "2021-03-08T00:00:00-0700",
+      "type": "CODE_SMELL",
+      "organization": "default-organization",
+      "fromHotspot": false
+    },
+    {
+      "key": "zH__Vp0oaFTBPTv15Qlw",
+      "rule": "java:S1181",
+      "severity": "MAJOR",
+      "component": "myproj-module2:module2/com/thecompany/module2/PhoneNumbers.java",
+      "project": "myproj-module2",
+      "line": 101,
+      "hash": "93b002803453691b8b3107691c89cf67",
+      "textRange": {
+        "startLine": 101,
+        "endLine": 101,
+        "startOffset": 13,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Catch Exception instead of Throwable.",
+      "effort": "20min",
+      "debt": "20min",
+      "author": "francois@mycompany.com",
+      "tags": [
+        "bad-practice",
+        "cert",
+        "cwe",
+        "error-handling"
+      ],
+      "creationDate": "2021-03-08T00:00:00-0700",
+      "updateDate": "2021-03-08T00:00:00-0700",
+      "type": "CODE_SMELL",
+      "organization": "default-organization",
+      "fromHotspot": false
+    }
+  ],
+  "components": [
+    {
+      "organization": "default-organization",
+      "key": "myproj-module2:module2/com/thecompany/module2/Addresses.java",
+      "uuid": "mX0c0bc7I819MX12Sodz",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "Addresses.java",
+      "longName": "module2/com/thecompany/module2/Addresses.java",
+      "path": "module2/com/thecompany/module2/Addresses.java"
+    },
+    {
+      "organization": "default-organization",
+      "key": "myproj-module2:module2/com/thecompany/module2/PhoneNumbers.java",
+      "uuid": "seyh4swiY8KVi4PITj4M",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "PhoneNumbers.java",
+      "longName": "module2/com/thecompany/module2/PhoneNumbers.java",
+      "path": "module2/com/thecompany/module2/PhoneNumbers.java"
+    }
+  ],
+  "facets": []
+}

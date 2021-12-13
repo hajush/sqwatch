@@ -1,0 +1,229 @@
+{
+  "total": 10,
+  "p": 1,
+  "ps": 100,
+  "paging": {
+    "pageIndex": 1,
+    "pageSize": 100,
+    "total": 10
+  },
+  "effortTotal": 60,
+  "debtTotal": 60,
+  "issues": [
+    {
+      "key": "HXGtR36f86mShK7WIcHt",
+      "rule": "common-java:DuplicatedBlocks",
+      "severity": "MAJOR",
+      "component": "myproj-module1:module1/src/main/java/com/thecompany/stuff/SomeCode.java",
+      "project": "myproj-module1",
+      "flows": [],
+      "status": "OPEN",
+      "message": "1 duplicated blocks of code must be removed.",
+      "effort": "20min",
+      "debt": "20min",
+      "author": "janet@mycompany.com",
+      "tags": [
+        "pitfall"
+      ],
+      "creationDate": "2021-03-08T00:00:00-0700",
+      "updateDate": "2021-03-08T00:00:00-0700",
+      "type": "CODE_SMELL",
+      "organization": "default-organization",
+      "fromHotspot": false
+    },
+    {
+      "key": "socHcrmt855qzm8r0-Ap",
+      "rule": "java:S1133",
+      "severity": "INFO",
+      "component": "myproj-module1:module1/src/main/java/com/thecompany/stuff/SomeCode.java",
+      "project": "myproj-module1",
+      "line": 16,
+      "hash": "7e81869d0327d82fabaf5bb788ff46ba",
+      "textRange": {
+        "startLine": 16,
+        "endLine": 16,
+        "startOffset": 17,
+        "endOffset": 27
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do not forget to remove this deprecated code someday.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "jake@mycompany.com",
+      "tags": [
+        "obsolete"
+      ],
+      "creationDate": "2021-03-08T00:00:00-0700",
+      "updateDate": "2021-03-08T00:00:00-0700",
+      "type": "CODE_SMELL",
+      "organization": "default-organization",
+      "fromHotspot": false
+    },
+    {
+      "key": "kAL1CgMfv1KCnjSOZq3e",
+      "rule": "java:S1123",
+      "severity": "MAJOR",
+      "component": "myproj-module1:module1/src/main/java/com/thecompany/stuff/SomeCode.java",
+      "project": "myproj-module1",
+      "line": 16,
+      "hash": "7e81869d0327d82fabaf5bb788ff46ba",
+      "textRange": {
+        "startLine": 16,
+        "endLine": 16,
+        "startOffset": 17,
+        "endOffset": 27
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add the missing @deprecated Javadoc tag.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "johnny@mycompany.com",
+      "tags": [
+        "bad-practice",
+        "obsolete"
+      ],
+      "creationDate": "2021-03-08T00:00:00-0700",
+      "updateDate": "2021-03-08T00:00:00-0700",
+      "type": "CODE_SMELL",
+      "organization": "default-organization",
+      "fromHotspot": false
+    },
+    {
+      "key": "mG-geDSVeIskkRl6DHnN",
+      "rule": "java:S1133",
+      "severity": "INFO",
+      "component": "myproj-module1:module1/src/main/java/com/thecompany/stuff/SomeCode.java",
+      "project": "myproj-module1",
+      "line": 57,
+      "hash": "eb09b213210486a5f7977478d326806e",
+      "textRange": {
+        "startLine": 57,
+        "endLine": 57,
+        "startOffset": 22,
+        "endOffset": 42
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Do not forget to remove this deprecated code someday.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "jake@mycompany.com",
+      "tags": [
+        "obsolete"
+      ],
+      "creationDate": "2021-03-08T00:00:00-0700",
+      "updateDate": "2021-03-08T00:00:00-0700",
+      "type": "CODE_SMELL",
+      "organization": "default-organization",
+      "fromHotspot": false
+    },
+    {
+      "key": "a44mrKn5r0QpaBo3Nu01",
+      "rule": "java:S3973",
+      "severity": "CRITICAL",
+      "component": "myproj-module1:module1/src/main/java/com/thecompany/stuff/MoreCode.java",
+      "project": "myproj-module1",
+      "line": 76,
+      "hash": "50d093523a1043221461981f4abe3447",
+      "textRange": {
+        "startLine": 76,
+        "endLine": 76,
+        "startOffset": 8,
+        "endOffset": 24
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "myproj-module1:module1/src/main/java/com/thecompany/stuff/MoreCode.java",
+              "textRange": {
+                "startLine": 77,
+                "endLine": 77,
+                "startOffset": 3,
+                "endOffset": 60
+              }
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Use indentation to denote the code conditionally executed by this \"if\".",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "johnny@mycompany.com",
+      "tags": [
+        "confusing",
+        "suspicious"
+      ],
+      "creationDate": "2021-03-08T00:00:00-0700",
+      "updateDate": "2021-03-08T00:00:00-0700",
+      "type": "CODE_SMELL",
+      "organization": "default-organization",
+      "fromHotspot": false
+    },
+    {
+      "key": "8ESyiUcDokcYLgLU3plT",
+      "rule": "java:S2629",
+      "severity": "MAJOR",
+      "component": "myproj-module1:module1/src/main/java/com/thecompany/stuff/YetMoreCode.java",
+      "project": "myproj-module1",
+      "line": 62,
+      "hash": "60b242e369ab0ede13090904ac47e334",
+      "textRange": {
+        "startLine": 62,
+        "endLine": 62,
+        "startOffset": 11,
+        "endOffset": 64
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Use the built-in formatting to construct this argument.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "harriette@mycompany.com",
+      "tags": [
+        "performance"
+      ],
+      "creationDate": "2021-03-08T00:00:00-0700",
+      "updateDate": "2021-03-08T00:00:00-0700",
+      "type": "CODE_SMELL",
+      "organization": "default-organization",
+      "fromHotspot": false
+    }
+  ],
+  "components": [
+    {
+      "organization": "default-organization",
+      "key": "myproj-module1:module1/src/main/java/com/thecompany/stuff/MoreCode.java",
+      "uuid": "q-Zgtv_eR81QwTaRp2dI",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "MoreCode.java",
+      "longName": "module1/src/main/java/com/thecompany/stuff/MoreCode.java",
+      "path": "module1/src/main/java/com/thecompany/stuff/MoreCode.java"
+    },
+    {
+      "organization": "default-organization",
+      "key": "myproj-module1:module1/src/main/java/com/thecompany/stuff/YetMoreCode.java",
+      "uuid": "607JGmD8o-Z6XcPavu4s",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "YetMoreCode.java",
+      "longName": "module1/src/main/java/com/thecompany/stuff/YetMoreCode.java",
+      "path": "module1/src/main/java/com/thecompany/stuff/YetMoreCode.java"
+    },
+    {
+      "organization": "default-organization",
+      "key": "myproj-module1:module1/src/main/java/com/thecompany/stuff/SomeCode.java",
+      "uuid": "e_SnFAehoUrq3zEG2AFa",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "SomeCode.java",
+      "longName": "module1/src/main/java/com/thecompany/stuff/SomeCode.java",
+      "path": "module1/src/main/java/com/thecompany/stuff/SomeCode.java"
+    }
+  ],
+  "facets": []
+}

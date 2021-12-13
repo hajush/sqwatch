@@ -1,0 +1,89 @@
+# This list would come from GIT to help match multiple email acccounts to a single user/email
+# To make this work with SQWatch, put it in the $TOMCAT_HOME/conf
+
+John Adams <John.Adams@mycompany.com>
+Samuel Adams <Samuel.Adams@mycompany.com>
+Samuel Adams <sadams@mycompany.com>
+Alfred Adler <aadler@mycompany.com>
+Dante Alighieri <dalighieri@mycompany.com>
+Johnny Appleseed <johnny.appleseed@mycompany.com>
+Louis Armstrong <larmstrong@mycompany.com>
+Fred Astaire <Fred.Astaire@mycompany.com>
+Lucille Ball <lball@mycompany.com>
+William Blake <wblake@mycompany.com>
+Humphrey Bogart <hbogart@mycompany.com>
+Marlon Brando <mbrando@mycompany.com>
+Charlotte Bronte <cbronte@mycompany.com>
+James Cagney <jcagney@mycompany.com>
+Albert Camus <acamus@mycompany.com>
+Lewis Carroll <lcarroll@mycompany.com>
+Charlie Chaplin <cchaplin@mycompany.com>
+Noam Chomsky <nchomsky@mycompany.com>
+Claudette Colbert <ccolbert@mycompany.com>
+Gary Cooper <Gary.Cooper@mycompany.com>
+Nicolaus Copernicus <ncopernicus@mycompany.com>
+Davy Crockett <davy.crockett@mycompany.com>
+Marie Curie <mcurie@mycompany.com>
+James Dean <jdean@mycompany.com>
+Emily Dickinson <edickinson>
+Kirk Douglas <kdouglas@mycompany.com>
+Ralph Waldo Emerson <rwemerson@mycompany.com>
+Werner Erhard <Werner.Erhard@mycompany.com>
+F. Scott Fitzgerald <fsfitzgerald@mycompany.com>
+Errol Flynn <eflynn@mycompany.com>
+Henry Fonda <hfonda@mycompany.com>
+Benjamin Franklin <mkornienko@mycompany.com>
+Viktor Frankyl <vfrankyl@mycompany.com>
+Sigmund Freud <sfreud@mycompany.com>
+Robert Frost <rfrost@mycompany.com>
+Clark Gable <cgable@mycompany.com>
+Cary Grant <Cary.Grant@mycompany.com>
+Ulysses Grant <ugrant@mycompany.com>
+Alexander Hamilton <Alexander.Hamilton@mycompany.com>
+John Hancock <jhancock@mycompany.com>
+Jean Harlow <Jean.Harlow@mycompany.com>
+Patrick Henry <phenry@mycompany.com>
+Rock Hudson <rhudson@mycompany.com>
+David Hume <dhume@mycompany.com>
+William James <wjames@mycompany.com>
+Thomas Jefferson <tjefferson@mycompany.com>
+James Joyce <jjoyce@mycompany.com>
+Carl Jung <cjung@mycompany.com>
+Burt Lancaster <blancaster@mycompany.com>
+Buster Keaton <Buster.Keaton@mycompany.com>
+John Keats <jkeats@mycompany.com>
+Jean Kelly <jkelly@mycompany.com>
+Abraham Lincoln <alincoln@mycompany.com>
+James Madison <jmadison@mycompany.com>
+Abraham Maslow <amaslow@mycompany.com>
+John Milton <jmilton@mycompany.com>
+Robert Mitchum <Robert.Mitchum@mycompany.com>
+James Monroe <jmonroe@mycompany.com> <jmonroe@me.com>
+Marilyn Monroe <mmonroe@mycompany.com>
+Maria Montessori <mmontessori@mycompany.com>
+Friedrich Nietzsche <fnietzsche@mycompany.com>
+Lawrence Olivier <lolivier@mycompany.com>
+Thomas Paine <Thomas.Paine@mycompany.com>
+Sylvia Plath <splath@mycompany.com>
+Edgar Allen Poe <eapoe@mycompany.com>
+Sidney Poitier <spoitier@mycompany.com>
+Donna Reed <dreed@mycompany.com>
+Edward G. Robinson <egrobinson@mycompany.com>
+Carl Rogers <crogers@mycompany.com>
+Franklin Roosevelt <Franklin.Roosevelt@mycompany.com>
+J. D. Salinger <jdsalinger@mycompany.com>
+Jean-Paul Sartre <jpsartre@mycompany.com>
+William Shakespeare <wshakespeare@mycompany.com>
+Barbara Stanwyck <bstanwyck@mycompany.com>
+John Steinbeck <jsteinbeck@mycompany.com>
+Jimmy Stewart <jstewart@mycompany.com>
+Rabindranath Tagore <rtagore@mycompany.com>
+Spencer Tracy <Spencer.Tracy@mycompany.com>
+Harriette Tubman <htubman@mycompany.com>
+Mark Twain <mtwain@mycompany.com>
+George Washington <George.Washington@mycompany.com> <george@mycompany.com>
+John Wayne <John.Wayne@mycompany.com>
+Orsen Welles <owelles@mycompany.com>
+Walt Whitman <wwhitman@mycompany.com>
+William Wordsworth <wwordsworth@mycompany.com>
+William Butler Yeats <wbyeats@mycompany.com>

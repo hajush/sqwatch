@@ -1,0 +1,33 @@
+{
+  "name": "sqwatch",
+  "version": "1.0.0",
+  "description": "SQWatch in ReactJS",
+  "repository": {
+    "type": "git",
+    "url": "ssh://"
+  },
+  "author": "Harold Shinsato",
+  "license": "MIT",
+  "dependencies": {
+    "mobx": "^5.14.2",
+    "mobx-react": "^6.1.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2"
+  },
+  "scripts": {
+    "watch": "webpack --watch -d",
+    "clean": "echo delete node_modules folder manually if necessary",
+    "assemble": "npm install webpack; node_modules/webpack/bin/webpack.js",
+    "check": "npm test"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.2",
+    "react-bootstrap-table-next": "^3.2.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.1.0"
+  }
+}
