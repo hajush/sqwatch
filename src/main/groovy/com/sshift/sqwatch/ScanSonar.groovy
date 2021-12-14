@@ -340,7 +340,7 @@ class ScanSonar {
     }
 
     private Author getAuthorFromDb(String authorEmail, boolean save = true) {
-        Author authorData = authorEmail.isBlank() ? Author.NO_AUTHOR : authorRepository.findByPrimaryEmail(authorEmail)
+        Author authorData = authorRepository.findByPrimaryEmail(authorEmail)
         if (!authorData) {
             authorData = authorRepository.findBySecondariesContaining(authorEmail)
         }
