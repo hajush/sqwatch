@@ -46,10 +46,10 @@ class MailMap {
     Set<Map.Entry> updateAuthorsFromMap(AuthorRepository authorRepository) {
         NAME_MAP.entrySet().each { entry ->
             Author author = authorRepository.findByName(entry.value)
-            if (!author) {
-                author = new Author(entry.value, entry.key, Team.OTHER)
-            } else {
+            if (author) {
                 author.secondaryEmails += entry.key
+            } else {
+                author = new Author(entry.value, entry.key, Team.OTHER)
             }
             authorRepository.save(author)
         }

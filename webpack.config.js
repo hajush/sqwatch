@@ -25,8 +25,5 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.DefinePlugin({
-            SONAR_BASE_URL: JSON.stringify(process.env.SQWATCH_SONAR_URL)
-        })
     ]
 };

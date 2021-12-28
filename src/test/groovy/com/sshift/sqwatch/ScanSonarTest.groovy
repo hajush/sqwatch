@@ -2,6 +2,7 @@ package com.sshift.sqwatch
 
 import groovy.mock.interceptor.MockFor
 import org.junit.Before
+import org.springframework.beans.factory.annotation.Value
 
 import java.time.Instant
 import java.time.LocalDateTime
@@ -64,6 +65,8 @@ class ScanSonarTest {
         scanSonar.project = project
         scanSonar.SONAR_BASE_AUTH = 'fake:auth'
         scanSonar.mailMap = MAIL_MAP
+        scanSonar.SQWATCH_WEEKS_OF_MASTER_ISSUES = 8
+        scanSonar.SQWATCH_WEEKS_OF_BRANCH_ISSUES = 3
     }
 
     @Test

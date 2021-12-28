@@ -17,8 +17,6 @@ class ScanSonar {
     private static final String ISSUES_SEARCH = '/api/issues/search'
     private static final String PROJECTS_SEARCH = '/api/projects/search'
     private static final int MINUTES_PER_DAY = 480
-    private static final int WEEKS_OF_MASTER_ISSUES = 8
-    private static final int WEEKS_OF_BRANCH_ISSUES = 3
 
     // SonarQube will not allow fetching more than 10000 issues
     private static final int MAX_ISSUES = 10000
@@ -47,6 +45,10 @@ class ScanSonar {
     private String THRESHHOLD_BUG
     @Value('${sqwatch.threshholdvulnerability}')
     private String THRESHHOLD_VULNERABILITY
+    @Value('${sqwatch.weeksmasterissues}')
+    private int SQWATCH_WEEKS_OF_MASTER_ISSUES
+    @Value('${sqwatch.weeksbranchissues}')
+    private int SQWATCH_WEEKS_OF_BRANCH_ISSUES
 
     private IssueSeverity bugThreshhold = IssueSeverity.INFO
     private IssueSeverity smellThreshhold = IssueSeverity.INFO
@@ -75,6 +77,10 @@ class ScanSonar {
 
         mailMap = new MailMap((mailMapResource && mailMapResource.exists())
                 ? mailMapResource.inputStream : InputStream.nullInputStream())
+    }
+
+    String getSonarBaseURL() {
+        return SONAR_BASE_URL;
     }
 
     List<String> updateTeamsFromDB() {
@@ -256,7 +262,7 @@ class ScanSonar {
     }
 
     private String getIssuesSinceDate() {
-        return timeProvider.weeksAgo(WEEKS_OF_MASTER_ISSUES)
+        return timeProvider.weeksAgo(SQWATCH_WEEKS_OF_MASTER_ISSUES)
     }
 
     List<Issue> updateBranchIssues() {
@@ -292,7 +298,7 @@ class ScanSonar {
 
     List<Issue> getProjectIssues(String project) {
         getAllIssuesCreatedAfter(
-                timeProvider.weeksAgo(WEEKS_OF_BRANCH_ISSUES), URLEncoder.encode(project, 'UTF-8'), 1)
+                timeProvider.weeksAgo(SQWATCH_WEEKS_OF_BRANCH_ISSUES), URLEncoder.encode(project, 'UTF-8'), 1)
     }
 
     private List<Issue> getAllIssuesCreatedAfter(afterDate, project, pageNo = 1, updating = false) {
@@ -374,7 +380,7 @@ class ScanSonar {
         def pageSize = resultJson.paging.pageSize
         def collectedResult = resultJson.components.collect { it }
         def nextPage = nextPage(total, pageNo, pageSize)
-        def projectNames = collectedResult.findAll { it.name.startsWith(project.branchPrefix)} .collect { it.name }
+        def projectNames = collectedResult.findAll { it.key.startsWith(project.branchPrefix)} .collect { it.key }
 
         if (nextPage == -1) {
             return projectNames

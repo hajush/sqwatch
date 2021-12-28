@@ -1,16 +1,13 @@
 package com.sshift.sqwatch
 
 import groovy.util.logging.Log
+import javax.servlet.http.HttpServletRequest
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.ResponseBody
 import org.springframework.web.bind.annotation.RestController
-
-import javax.servlet.http.HttpServletRequest
-import java.nio.file.Path
-import java.nio.file.Paths
 
 @RestController
 @Log
@@ -81,6 +78,12 @@ class IssueController {
     @ResponseBody
     List<String> projects() {
         return scanSonar.getProjects()
+    }
+
+    @GetMapping(value = '/sonarqubeurl')
+    @ResponseBody
+    String getSonarBaseURL() {
+        return scanSonar.getSonarBaseURL()
     }
 
     @GetMapping(value = '/initdb')

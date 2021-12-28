@@ -6,7 +6,8 @@ export default class TeamStore {
         extendObservable(this, {
             allTeams: [],
             teams: [],
-            authors: []
+            authors: [],
+            sonarBaseURL: String
         });
         this.addTeam = this.addTeam.bind(this);
         this.removeTeam = this.removeTeam.bind(this);
@@ -15,6 +16,7 @@ export default class TeamStore {
         this.getAllTeams = this.getAllTeams.bind(this);
         this.getTeam = this.getTeam.bind(this);
         this.setTeam = this.setTeam.bind(this);
+        this.getSonarBaseURL = this.getSonarBaseURL.bind(this);
     }
 
     initFromDb() {
@@ -25,6 +27,10 @@ export default class TeamStore {
         fetch('/api/teams')
             .then(res => res.json())
             .then(data => this.allTeams = data._embedded.teams)
+            .catch(console.log);
+        fetch('/sonarqubeurl')
+            .then(res => res.text())
+            .then(data => this.sonarBaseURL = data)
             .catch(console.log);
     }
 
@@ -70,7 +76,11 @@ export default class TeamStore {
     }
 
     getAllTeams() {
-        return  this.allTeams.map(team => team.name);
+        return this.allTeams.map(team => team.name);
+    }
+
+    getSonarBaseURL() {
+        return this.sonarBaseURL;
     }
 
 }
