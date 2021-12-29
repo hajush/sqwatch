@@ -103,6 +103,21 @@ class IssueTest {
     }
 
     @Test
+    void testFileNameExtractionNotJava() {
+        Issue issue = new Issue([
+                "key": "AX4Ctl0nvvl99Bdr4ggi",
+                "message": "The variable [x] in class com.mycompany.myproj.Aardvark is not used",
+                "component": "One:One:src/main/groovy/com/mycompany/myproj/Aardvark.groovy",
+                "author": "amanda.peet@mycompany.com",
+                "severity": "MINOR",
+                "type": "BUG",
+                "rule": "grvy:org.codenarc.rule.unused.UnusedVariableRule.fixed",
+                "shortComponent": "Two-Aardvark.groovy"], apeet)
+
+        assertThat(issue.fileName, is("Aardvark.groovy"))
+    }
+
+    @Test
     void testSortingProblem() {
         JsonSlurper jsonSlurper = new JsonSlurper()
         ClassLoader classLoader = getClass().getClassLoader()

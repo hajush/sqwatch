@@ -70,7 +70,7 @@ class Issue implements Comparable {
     }
 
     private void makeFileName() {
-        def matches = this.component =~ /[^\:]*\:([\-\w]*)\/.*\/(\w*\.java)$/
+        def matches = this.component =~ /[^\:]*\:([\-\w]*)\/.*\/(\w*\.\w*)$/
         this.fileName = (matches.size() > 0 && matches[0] && matches[0][2]) ?
                 "${matches[0][2]}" : null
     }

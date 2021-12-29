@@ -26,7 +26,8 @@
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "babel-loader": "^8.0.2",
-    "react-bootstrap-table-next": "^3.2.1",
+    "react-bootstrap-table-next": "^4.0.3",
+    "underscore": "^1.13.2",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.1.0"
   }
