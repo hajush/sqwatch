@@ -436,6 +436,55 @@ class ScanSonarTest {
     }
 
     @Test
+    void testNewUpcomingNoticesIncludeMainBranch() {
+        // new upcoming used to only be checked in the upcoming branches, but
+        // we really need to check the main branch for new issues that appeared in the last x days.
+        // We are hard coding this feature at a week for now (7 days)
+
+        Issue issue1 = new Issue([
+                key: '111111111',
+                severity: 'CRITICAL',
+                type: 'CODE_SMELL',
+                authorEmail: ahamilton.getPrimaryEmail(),
+                creationDate: "2022-02-10T00:00:00-0700",
+                rule        : 'squid:S1186'
+        ], ahamilton)
+        Issue issue2 = new Issue([
+                key: '9999999999',
+                severity: 'CRITICAL',
+                type: 'CODE_SMELL',
+                authorEmail: tjefferson.getPrimaryEmail(),
+                creationDate: "2022-02-09T00:00:00-0700",
+                rule        : 'squid:S1186'
+        ], tjefferson)
+        def stubOldUpcomingList = []
+        ArrayList<Issue> issues = new ArrayList<>()
+        issues.add(issue1)
+        issues.add(issue2)
+        scanSonar.urlFetcher = [] as URLFetcher // fake the fetcher to ensure no external calls needed
+        scanSonar.authorRepository = fakeAuthorRepository
+        scanSonar.oldUpcomingRepository = [
+                save     : { oldUpcoming -> stubOldUpcomingList.add(oldUpcoming) },
+                findByKey: { stubOldUpcomingList.find { it.key == key } }
+        ] as OldUpcomingRepository
+        scanSonar.issueRepository = [
+                findByCreationDateGreaterThanEqual: { creationDate -> issues },
+                deleteByProjectName               : { projectName -> },
+                deleteBranchIssues                : { -> },
+                unbufferUpdatingIssues            : { ->
+                    issues.each { issue -> if (issue.updating) issue.setUpdating(false) }
+                },
+                save                              : { issue -> }
+        ] as IssueRepository
+        String issueOutput = scanSonar.getNewUpcomingIssues(Team.OTHER)
+        assertThat(issueOutput, is('tjefferson@mycompany.com\n' +
+                '<p>Thomas Jefferson has 1 upcoming issue(s) in feature branches: \n' +
+                '<ul>\n' +
+                '  <li>CRITICAL - CODE_SMELL - <a href=http://mycompany.com/project/issues?id=null&issues=9999999999&open=9999999999>null</a><br/>\n' +
+                'null</li>\n</ul>\n</p>\n'))
+    }
+
+    @Test
     void testNewUpcomingNoticesOnlyOnce() {
         // we want to see if new upcoming notices are raised only once
         def issue1 = [

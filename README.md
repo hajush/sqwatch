@@ -22,9 +22,8 @@ in brackets need to be replaced with the corresponding values. The SonarQube aut
 in the user:pass format, but the token is used in the user field, and the password left blank. So 
 trailing colon is mandatory.
 
-The SQWATCH_SONAR_BRANCH_PREFIX maybe be either a prefix or "upcoming_is_x", which means
-that the flow of code does not come from feature branches so we need to count on the daily scans for
-new issues. If the 'x' is replaced with a positive integer, new upcoming issues will be scanned back x days.
+The SQWATCH_SONAR_BRANCH_PREFIX is used to match all feature or future branch prefixes 
+to count as 'upcoming' since they are not yet in the main branch(es).
 
 ```text/x-sh
 export SQWATCH_DB_URL=<db url, e.g. jdbc:postgresql://localhost:5432/sqwatch>
@@ -33,7 +32,7 @@ export SQWATCH_DB_PASS=<db user password here>
 export SQWATCH_SONAR_URL=http://yoursonarqube.whatever:9000
 export SQWATCH_SONAR_AUTH=<sonartoken here, don't forget colon after>:
 export SQWATCH_SONAR_MASTER=<SonarQube project name for master branch scans (can be comma delimited list)>
-export SQWATCH_SONAR_BRANCH_PREFIX=<prefix for SonarQube project names for feature branch scans | upcoming_is_today>
+export SQWATCH_SONAR_BRANCH_PREFIX=<prefix for SonarQube project names for feature/future branch scans>
 ```
 
 ## Building/Running

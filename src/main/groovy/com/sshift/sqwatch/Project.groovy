@@ -3,9 +3,8 @@ package com.sshift.sqwatch
 class Project {
 
     protected static final String UPCOMING = 'UPCOMING'
-    private static final String UPCOMING_IS_X = "upcoming_is_";
     private List<String> main
-    private String branchPrefix = UPCOMING_IS_X
+    private String branchPrefix = ''
 
     void setMain(String main) {
         this.main = main.split(',')
@@ -24,10 +23,10 @@ class Project {
     }
 
     boolean isNoBranches() {
-        return this.branchPrefix.startsWithIgnoreCase(UPCOMING_IS_X)
+        return this.branchPrefix.length() == 0
     }
 
     String getUpcomingPeriod() {
-        return isNoBranches() ? this.branchPrefix.substring(UPCOMING_IS_X.size()) : UPCOMING
+        return '7'
     }
 }

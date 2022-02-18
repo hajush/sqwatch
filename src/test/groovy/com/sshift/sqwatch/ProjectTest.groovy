@@ -24,29 +24,18 @@ class ProjectTest {
     }
 
     @Test
-    void testOneWeekNoUpcoming() {
-        Project project = new Project()
-        project.branchPrefix = 'upcoming_is_7'
-        assertThat(project.isNoBranches(), is(true))
-        assertThat(project.getUpcomingPeriod(), is('7'))
-        project.branchPrefix = 'Upcoming_IS_9'
-        assertThat(project.isNoBranches(), is(true))
-        assertThat(project.getUpcomingPeriod(), is('9'))
-    }
-
-    @Test
     void testOneWeekWithUpcoming() {
         Project project = new Project()
         project.branchPrefix = 'stuff-'
         assertThat(project.isNoBranches(), is(false))
-        assertThat(project.getUpcomingPeriod(), is('UPCOMING'))
+        assertThat(project.getUpcomingPeriod(), is('7'))
     }
 
     @Test
     void testEmptyBranchPrefix() {
         Project project = new Project()
         project.branchPrefix = ''
-        assertThat(project.isNoBranches(), is(false))
-        assertThat(project.getUpcomingPeriod(), is('UPCOMING'))
+        assertThat(project.isNoBranches(), is(true))
+        assertThat(project.getUpcomingPeriod(), is('7'))
     }
 }

@@ -134,7 +134,7 @@ class ScanSonar {
 
     String getNewUpcomingIssues(String teams) {
         logSomething("Showing new upcoming for ${teams} with severities ${THRESHHOLD_BUG} ${THRESHHOLD_CODESMELL} ${THRESHHOLD_VULNERABILITY}")
-        String newUpcomingIsWhen = project.isNoBranches() ? timeProvider.daysAgo(project.getUpcomingPeriod()) : Project.UPCOMING;
+        String newUpcomingIsWhen = timeProvider.daysAgo(project.getUpcomingPeriod())
         String output = ""
         List<String> teamsArray = teams.split(',')
         List<Issue> issues = getIssuesSince(newUpcomingIsWhen).findAll {
