@@ -7,16 +7,16 @@ import DateFormResolved from './DateFormResolved';
 import Teams from './Teams';
 import TeamChoice from './TeamChoice';
 import TeamIssues from './TeamIssues';
-import TeamStore from './TeamStore';
+import DataStore from './DataStore';
 import { Provider } from 'mobx-react';
 
-const teamStore = new TeamStore();
-teamStore.initFromDb();
+const dataStore = new DataStore();
+dataStore.initFromDb();
 
 class App extends React.Component {
 	render() {
 		return (
-			<Provider teamStore={teamStore}>
+			<Provider teamStore={dataStore}>
 				<Router>
 					<div>
 						<nav className="navbar navbar-expand-lg navbar-light">

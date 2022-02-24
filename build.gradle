@@ -10,7 +10,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'org.sonarqube'
 
 group = 'com.sshift'
-version = '1.0.1-SNAPSHOT'
+version = '1.0.1'
 
 compileJava {
     sourceCompatibility = 11.0
